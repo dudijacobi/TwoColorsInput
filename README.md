@@ -1,3 +1,10 @@
+### TODO:
+
+- StoryBook?
+- Tests?
+- Styled-components?
+- Improve ReadMe (images etc.)
+
 # Two colors input
 
 TwoColorsInput is a contentEditable React function that return JSX element with the functinality of an input

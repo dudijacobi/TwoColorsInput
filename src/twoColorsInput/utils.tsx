@@ -11,17 +11,17 @@ export const getPosition = (element: HTMLSpanElement): number => {
 export const setCaretPosition = (el: ChildNode, pos: number): number => {
   for (const node of el.childNodes) {
     if (node.nodeType == Node.TEXT_NODE) {
-      // we have a text node
+      // We have a text node
       if (node.textContent) {
         if (node.textContent.length >= pos) {
-          // finally add our range
+          // Finally add our range
           const range = document.createRange(),
             selection = window.getSelection();
           range.setStart(node, pos);
           range.collapse(true);
           selection?.removeAllRanges();
           selection?.addRange(range);
-          return -1; // we are done
+          return -1; // We are done
         } else {
           pos -= node.textContent.length;
         }
@@ -29,9 +29,9 @@ export const setCaretPosition = (el: ChildNode, pos: number): number => {
     } else {
       pos = setCaretPosition(node, pos);
       if (pos === -1) {
-        return -1; // no need to finish the for loop
+        return -1; // No need to finish the for loop
       }
     }
   }
-  return pos; // needed because of recursion stuff
+  return pos; // Needed because of recursion stuff
 };
