@@ -51,7 +51,7 @@ function App(): JSX.Element {
           placeholder="Add your text here.."
           startChars="/"
           endChars="/"
-          color="aqua"
+          color={color}
           disabled={disabled}
           onChange={(textValue) => setValue(textValue)}
         />
