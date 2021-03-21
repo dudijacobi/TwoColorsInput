@@ -11,7 +11,6 @@ import { getPosition, setCaretPosition } from "./utils";
 import "./twoColorsInput.scss";
 
 export interface TwoColorsInputProps {
-  name: string;
   color: string;
   startChars: string;
   endChars: string;

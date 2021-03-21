@@ -9,15 +9,20 @@ function App(): JSX.Element {
   const [value, setValue] = useState("");
   const [showInfo, setShowInfo] = useState(false);
 
-  const name = "test-input";
-  const disabled = false;
+  /** Try to play with the parameters :) **/
+  const color = "aqua";
   const startChars = "/";
   const endChars = "/";
   const infoText = `Different color from first '${startChars}' to the first '${endChars}' after it.`;
+  const disabled = false;
+
+  const createMarkup = () => {
+    return { __html: `Try <font color=${color}>TwoColorsInput</font> !` };
+  };
 
   return (
     <div className="App">
-      <h1>Test</h1>
+      <h2 dangerouslySetInnerHTML={createMarkup()}></h2>
       <div className="input-div">
         <div className="label-wrapper">
           <div className="label-and-info">
@@ -25,7 +30,6 @@ function App(): JSX.Element {
               className={classNames("label", {
                 disabled,
               })}
-              htmlFor={name}
             >
               Label
             </label>
@@ -43,7 +47,6 @@ function App(): JSX.Element {
           </div>
         </div>
         <TwoColorsInput
-          name={name}
           value={value}
           placeholder="Add your text here.."
           startChars="/"
