@@ -8,8 +8,6 @@
   outline: none;
 
   .two-colors-input-value {
-    display: inline-block;
-
     &:empty:not(:focus):before {
       content: attr(placeholder);
       opacity: 0.5;

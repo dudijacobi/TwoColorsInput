@@ -45,7 +45,7 @@ function App(): JSX.Element {
         <TwoColorsInput
           name={name}
           value={value}
-          placeholder="Placeholder"
+          placeholder="Add your text here.."
           startChars="/"
           endChars="/"
           color="aqua"
